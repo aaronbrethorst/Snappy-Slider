@@ -3,7 +3,7 @@ Snappy Slider
 
 SnappySlider is a simple subclass of UISlider that lets you specify discrete values to which the slider should 'snap' (detents), instead of minimumValue and maximumValue. 
 
-![Screenshot of SnappySlider](SnappySlider.png)
+![Screenshot of SnappySlider](https://github.com/aaronbrethorst/Snappy-Slider/raw/master/SnappySlider.png)
 
 MIT License
 ====
