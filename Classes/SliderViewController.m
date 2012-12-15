@@ -17,9 +17,7 @@
     
 	self.codeSlider = [[SnappySlider alloc] initWithFrame:CGRectMake(20, 61, 280, 23)];
 	
-	NSArray *detents = [NSArray arrayWithObjects:[NSNumber numberWithInt:0], [NSNumber numberWithInt:20],
-						[NSNumber numberWithInt:40], [NSNumber numberWithInt:60],
-						[NSNumber numberWithInt:80], [NSNumber numberWithInt:100], nil];
+	NSArray *detents = @[@0, @20, @40, @60, @80, @100];
 	
 	self.codeSlider.detents = detents;
 	self.xibSlider.detents = detents;

@@ -67,11 +67,11 @@
 	
 	for (int i=0; i < self.detents.count; i++)
 	{
-		rawDetents[i] = [[self.detents objectAtIndex:i] intValue];
+		rawDetents[i] = [(self.detents)[i] intValue];
 	}
 	
-	self.minimumValue = [[self.detents objectAtIndex:0] floatValue];
-	self.maximumValue = [[self.detents lastObject] floatValue];
+	self.minimumValue = [(self.detents)[0] floatValue];
+	self.maximumValue = [self.detents.lastObject floatValue];
 }
 
 - (void)setValue:(float)value animated:(BOOL)animated
@@ -96,7 +96,6 @@
 
 - (void)dealloc
 {
-	self.detents = nil;
 	free(rawDetents);
 }
 
