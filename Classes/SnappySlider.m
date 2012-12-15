@@ -25,14 +25,20 @@
 
 #import "SnappySlider.h"
 
+typedef void (^SliderValueChangedHandler) (id sender, int value);
+
+@interface SnappySlider ()
+- (void)_configureView;
+@property(nonatomic,copy) SliderValueChangedHandler valueChangedHandler;
+@end
+
 @implementation SnappySlider
 
 - (id)initWithFrame:(CGRect)aFrame
 {
 	if ((self = [super initWithFrame:aFrame]))
 	{
-		rawDetents = NULL;
-		self.detents = nil;
+		[self _configureView];
 	}
 	return self;
 }
@@ -41,10 +47,24 @@
 {
 	if ((self = [super initWithCoder:aDecoder]))
 	{
-		rawDetents = NULL;
-		self.detents = nil;
+        [self _configureView];
 	}
 	return self;
+}
+
+- (void)_configureView
+{
+    rawDetents = NULL;
+    self.detents = nil;
+    [self addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)valueChanged:(id)sender
+{
+    if (self.valueChangedHandler)
+    {
+        self.valueChangedHandler(self, (int)self.value);
+    }
 }
 
 - (void)setDetents:(NSArray *)v
@@ -92,6 +112,11 @@
 	}
 		
 	[super setValue:(float)bestFit animated:animated];
+}
+
+- (void)valueDidChange:(void (^)(id, int))block
+{
+    self.valueChangedHandler = block;
 }
 
 - (void)dealloc

@@ -37,10 +37,16 @@
 	
 	self.codeSlider.detents = detents;
 	self.xibSlider.detents = detents;
-	
+	self.blockSlider.detents = detents;
+    
 	[self.codeSlider addTarget:self action:@selector(val:) forControlEvents:UIControlEventValueChanged];
     
     [self.view addSubview:self.codeSlider];
+    
+    SliderViewController *weakSelf = self;
+    [self.blockSlider valueDidChange:^(id sender, int value) {
+        weakSelf.blockLabel.text = [NSString stringWithFormat:@"Updated with a block: %d", value];
+    }];
 }
 
 

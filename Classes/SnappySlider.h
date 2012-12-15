@@ -30,4 +30,5 @@
 	int* rawDetents;
 }
 @property(nonatomic,strong) NSArray *detents;
+- (void)valueDidChange:(void (^)(id sender, int value))block;
 @end

@@ -29,8 +29,9 @@
 @interface SliderViewController : UIViewController
 @property(nonatomic,strong) SnappySlider *codeSlider;
 @property(nonatomic,strong) IBOutlet SnappySlider *xibSlider;
+@property(nonatomic,strong) IBOutlet SnappySlider *blockSlider;
 @property(nonatomic,strong) IBOutlet UILabel *codeLabel;
 @property(nonatomic,strong) IBOutlet UILabel *xibLabel;
-
+@property(nonatomic,strong) IBOutlet UILabel *blockLabel;
 - (IBAction)xibValueChanged:(id)sender;
 @end
