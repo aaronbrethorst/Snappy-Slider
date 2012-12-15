@@ -15,6 +15,8 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		935B412D132D8E4F00417F24 /* SnappySlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 935B412C132D8E4F00417F24 /* SnappySlider.m */; };
 		93D99BB4167D21C900BB42C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D99BB3167D21C900BB42C2 /* Default-568h@2x.png */; };
+		93D99BC0167D251F00BB42C2 /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D99BBF167D251F00BB42C2 /* SliderViewController.m */; };
+		93D99BC3167D252900BB42C2 /* Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93D99BC2167D252900BB42C2 /* Slider.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		935B412B132D8E4F00417F24 /* SnappySlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnappySlider.h; sourceTree = "<group>"; };
 		935B412C132D8E4F00417F24 /* SnappySlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnappySlider.m; sourceTree = "<group>"; };
 		93D99BB3167D21C900BB42C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		93D99BBE167D251F00BB42C2 /* SliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderViewController.h; sourceTree = "<group>"; };
+		93D99BBF167D251F00BB42C2 /* SliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderViewController.m; sourceTree = "<group>"; };
+		93D99BC2167D252900BB42C2 /* Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slider.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				93D99BBE167D251F00BB42C2 /* SliderViewController.h */,
+				93D99BBF167D251F00BB42C2 /* SliderViewController.m */,
 				1D3623240D0F684500981E51 /* snappysliderAppDelegate.h */,
 				1D3623250D0F684500981E51 /* snappysliderAppDelegate.m */,
 				935B412B132D8E4F00417F24 /* SnappySlider.h */,
@@ -91,6 +98,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				93D99BC2167D252900BB42C2 /* Slider.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* snappyslider-Info.plist */,
 			);
@@ -161,6 +169,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				93D99BB4167D21C900BB42C2 /* Default-568h@2x.png in Resources */,
+				93D99BC3167D252900BB42C2 /* Slider.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +183,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* snappysliderAppDelegate.m in Sources */,
 				935B412D132D8E4F00417F24 /* SnappySlider.m in Sources */,
+				93D99BC0167D251F00BB42C2 /* SliderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

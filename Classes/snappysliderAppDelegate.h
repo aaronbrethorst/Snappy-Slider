@@ -24,21 +24,10 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-#import "SnappySlider.h"
+#import "SliderViewController.h"
 
-@interface snappysliderAppDelegate : NSObject <UIApplicationDelegate>
-{
-    UIWindow *window;
-	SnappySlider *slider;
-	SnappySlider *xibSlider;
-	
-	UILabel *codeLabel;
-	UILabel *xibLabel;
-}
-@property(nonatomic,retain) IBOutlet SnappySlider *xibSlider;
-@property(nonatomic,retain) IBOutlet UILabel *codeLabel;
-@property(nonatomic,retain) IBOutlet UILabel *xibLabel;
+@interface snappysliderAppDelegate : UIResponder <UIApplicationDelegate>
+@property(nonatomic,retain) SliderViewController *viewController;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-- (IBAction)xibValueChanged:(id)sender;
 @end
 
