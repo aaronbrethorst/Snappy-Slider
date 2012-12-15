@@ -26,14 +26,13 @@
 #import "SnappySlider.h"
 
 @implementation SnappySlider
-@synthesize detents;
 
 - (id)initWithFrame:(CGRect)aFrame
 {
 	if ((self = [super initWithFrame:aFrame]))
 	{
 		rawDetents = NULL;
-		detents = nil;
+		self.detents = nil;
 	}
 	return self;
 }
@@ -43,37 +42,36 @@
 	if ((self = [super initWithCoder:aDecoder]))
 	{
 		rawDetents = NULL;
-		detents = nil;
+		self.detents = nil;
 	}
 	return self;
 }
 
 - (void)setDetents:(NSArray *)v
 {
-	if (detents == v)
+	if (_detents == v)
 	{
 		return;
 	}
 	
 	NSArray *newDetents = [[v sortedArrayUsingSelector:@selector(compare:)] copy];
 	
-	[detents release];
-	detents = newDetents;
+	_detents = newDetents;
 	
 	if (nil != rawDetents)
 	{
 		free(rawDetents);
 	}
 	
-	rawDetents = malloc(sizeof(int) * [detents count]);
+	rawDetents = malloc(sizeof(int) * [self.detents count]);
 	
-	for (int i=0; i<[detents count]; i++)
+	for (int i=0; i < self.detents.count; i++)
 	{
-		rawDetents[i] = [[detents objectAtIndex:i] intValue];
+		rawDetents[i] = [[self.detents objectAtIndex:i] intValue];
 	}
 	
-	self.minimumValue = [[detents objectAtIndex:0] floatValue];
-	self.maximumValue = [[detents lastObject] floatValue];
+	self.minimumValue = [[self.detents objectAtIndex:0] floatValue];
+	self.maximumValue = [[self.detents lastObject] floatValue];
 }
 
 - (void)setValue:(float)value animated:(BOOL)animated
@@ -81,7 +79,7 @@
 	int bestDistance = INT_MAX;
 	int bestFit = INT_MAX;
 	
-	for (int i=0; i < [detents count]; i++)
+	for (int i=0; i < self.detents.count; i++)
 	{
 		int candidate = rawDetents[i];
 		int candidateDistance = abs(candidate - (int)value);
@@ -100,7 +98,6 @@
 {
 	self.detents = nil;
 	free(rawDetents);
-	[super dealloc];
 }
 
 @end

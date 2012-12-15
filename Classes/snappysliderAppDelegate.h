@@ -27,7 +27,7 @@
 #import "SliderViewController.h"
 
 @interface snappysliderAppDelegate : UIResponder <UIApplicationDelegate>
-@property(nonatomic,retain) SliderViewController *viewController;
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property(nonatomic,strong) SliderViewController *viewController;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
 @end
 

@@ -27,8 +27,7 @@
 
 @interface SnappySlider : UISlider
 {
-	NSArray *detents;
 	int* rawDetents;
 }
-@property(nonatomic,retain) NSArray *detents;
+@property(nonatomic,strong) NSArray *detents;
 @end
