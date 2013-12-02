@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "Snappy-Slider"
+  s.name         = "SnappySlider"
   s.version      = "0.0.1"
   s.summary      = "A subclass of UISlider that snaps to pre-specified values, or detents."
 
